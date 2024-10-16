@@ -1,6 +1,7 @@
 [user]
-	name = Your Name
-	email = email@example.org
+	name = Example Name
+	email = name@example.net
+	signingkey = C:/Users/example/.ssh/id_rsa
 [alias]
 	shorty = status --short --branch
 	s = shorty
@@ -29,3 +30,20 @@
     added = yellow
     changed = green
     untracked = cyan
+
+[init]
+	defaultBranch = main
+[commit]
+	gpgsign = false
+[tag]
+	forceSignAnnotated = false
+[core]
+	longpaths = true
+[credential "helperselector"]
+	selected = manager-core
+[push]
+	autoSetupRemote = true
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	allowedSignersFile = ~/.allowed_signers
